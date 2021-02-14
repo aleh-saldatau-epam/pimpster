@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1394C66925D5A80A0042B7B8 /* PimpsterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C65625D5A8090042B7B8 /* PimpsterApp.swift */; };
+		1394C66A25D5A80A0042B7B8 /* PimpsterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C65625D5A8090042B7B8 /* PimpsterApp.swift */; };
+		1394C66D25D5A80A0042B7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1394C65825D5A80A0042B7B8 /* Assets.xcassets */; };
+		1394C66E25D5A80A0042B7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1394C65825D5A80A0042B7B8 /* Assets.xcassets */; };
+		1394C68425D5A9940042B7B8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68225D5A9940042B7B8 /* RootView.swift */; };
+		1394C68525D5A9940042B7B8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68225D5A9940042B7B8 /* RootView.swift */; };
+		1394C68625D5A9940042B7B8 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68325D5A9940042B7B8 /* FeedView.swift */; };
+		1394C68725D5A9940042B7B8 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68325D5A9940042B7B8 /* FeedView.swift */; };
+		1394C68D25D5ACF70042B7B8 /* FeedBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */; };
+		1394C68E25D5ACF70042B7B8 /* FeedBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */; };
+		1394C69325D5ADE80042B7B8 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1394C69225D5ADE80042B7B8 /* FeedKit */; };
+		13E2E33525D5D8EF0072F54F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E33425D5D8EF0072F54F /* ImageLoader.swift */; };
+		13E2E33625D5D8EF0072F54F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E33425D5D8EF0072F54F /* ImageLoader.swift */; };
+		13E2E33A25D7CFCC0072F54F /* ImageFromURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E33925D7CFCC0072F54F /* ImageFromURLView.swift */; };
+		13E2E33B25D7CFCC0072F54F /* ImageFromURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E33925D7CFCC0072F54F /* ImageFromURLView.swift */; };
+		13E2E34025D7EF320072F54F /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13E2E33F25D7EF320072F54F /* FeedKit */; };
+		13E2E34425D82FA50072F54F /* FeedItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E34325D82FA50072F54F /* FeedItemCellView.swift */; };
+		13E2E34525D82FA50072F54F /* FeedItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E34325D82FA50072F54F /* FeedItemCellView.swift */; };
+		13E2E34925D82FE90072F54F /* FeedItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E34825D82FE90072F54F /* FeedItemDetailsView.swift */; };
+		13E2E34A25D82FE90072F54F /* FeedItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E34825D82FE90072F54F /* FeedItemDetailsView.swift */; };
+		13E2E35025D837F00072F54F /* PlayerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E34F25D837F00072F54F /* PlayerBrain.swift */; };
+		13E2E35125D837F00072F54F /* PlayerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E34F25D837F00072F54F /* PlayerBrain.swift */; };
+		13E2E35525D83D060072F54F /* StickyPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E35425D83D060072F54F /* StickyPlayerView.swift */; };
+		13E2E35625D83D060072F54F /* StickyPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E35425D83D060072F54F /* StickyPlayerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1394C65625D5A8090042B7B8 /* PimpsterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PimpsterApp.swift; sourceTree = "<group>"; };
+		1394C65825D5A80A0042B7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1394C65D25D5A80A0042B7B8 /* Pimpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pimpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394C66025D5A80A0042B7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1394C66525D5A80A0042B7B8 /* Pimpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pimpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394C66725D5A80A0042B7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1394C66825D5A80A0042B7B8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		1394C68225D5A9940042B7B8 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		1394C68325D5A9940042B7B8 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBrain.swift; sourceTree = "<group>"; };
+		13E2E33425D5D8EF0072F54F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		13E2E33925D7CFCC0072F54F /* ImageFromURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromURLView.swift; sourceTree = "<group>"; };
+		13E2E34325D82FA50072F54F /* FeedItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCellView.swift; sourceTree = "<group>"; };
+		13E2E34825D82FE90072F54F /* FeedItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemDetailsView.swift; sourceTree = "<group>"; };
+		13E2E34F25D837F00072F54F /* PlayerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBrain.swift; sourceTree = "<group>"; };
+		13E2E35425D83D060072F54F /* StickyPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyPlayerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1394C65A25D5A80A0042B7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1394C69325D5ADE80042B7B8 /* FeedKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394C66225D5A80A0042B7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13E2E34025D7EF320072F54F /* FeedKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1394C65025D5A8080042B7B8 = {
+			isa = PBXGroup;
+			children = (
+				1394C65525D5A8090042B7B8 /* Shared */,
+				1394C65F25D5A80A0042B7B8 /* iOS */,
+				1394C66625D5A80A0042B7B8 /* macOS */,
+				1394C65E25D5A80A0042B7B8 /* Products */,
+				13E2E33E25D7EF320072F54F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1394C65525D5A8090042B7B8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1394C68025D5A9940042B7B8 /* Brains */,
+				1394C68125D5A9940042B7B8 /* Views */,
+				1394C65625D5A8090042B7B8 /* PimpsterApp.swift */,
+				1394C65825D5A80A0042B7B8 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		1394C65E25D5A80A0042B7B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1394C65D25D5A80A0042B7B8 /* Pimpster.app */,
+				1394C66525D5A80A0042B7B8 /* Pimpster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1394C65F25D5A80A0042B7B8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1394C66025D5A80A0042B7B8 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1394C66625D5A80A0042B7B8 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1394C66725D5A80A0042B7B8 /* Info.plist */,
+				1394C66825D5A80A0042B7B8 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1394C68025D5A9940042B7B8 /* Brains */ = {
+			isa = PBXGroup;
+			children = (
+				1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */,
+				13E2E33425D5D8EF0072F54F /* ImageLoader.swift */,
+				13E2E34F25D837F00072F54F /* PlayerBrain.swift */,
+			);
+			path = Brains;
+			sourceTree = "<group>";
+		};
+		1394C68125D5A9940042B7B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1394C68225D5A9940042B7B8 /* RootView.swift */,
+				13E2E33925D7CFCC0072F54F /* ImageFromURLView.swift */,
+				1394C68325D5A9940042B7B8 /* FeedView.swift */,
+				13E2E34325D82FA50072F54F /* FeedItemCellView.swift */,
+				13E2E34825D82FE90072F54F /* FeedItemDetailsView.swift */,
+				13E2E35425D83D060072F54F /* StickyPlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13E2E33E25D7EF320072F54F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1394C65C25D5A80A0042B7B8 /* Pimpster (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1394C67125D5A80A0042B7B8 /* Build configuration list for PBXNativeTarget "Pimpster (iOS)" */;
+			buildPhases = (
+				1394C65925D5A80A0042B7B8 /* Sources */,
+				1394C65A25D5A80A0042B7B8 /* Frameworks */,
+				1394C65B25D5A80A0042B7B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pimpster (iOS)";
+			packageProductDependencies = (
+				1394C69225D5ADE80042B7B8 /* FeedKit */,
+			);
+			productName = "Pimpster (iOS)";
+			productReference = 1394C65D25D5A80A0042B7B8 /* Pimpster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1394C66425D5A80A0042B7B8 /* Pimpster (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1394C67425D5A80A0042B7B8 /* Build configuration list for PBXNativeTarget "Pimpster (macOS)" */;
+			buildPhases = (
+				1394C66125D5A80A0042B7B8 /* Sources */,
+				1394C66225D5A80A0042B7B8 /* Frameworks */,
+				1394C66325D5A80A0042B7B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pimpster (macOS)";
+			packageProductDependencies = (
+				13E2E33F25D7EF320072F54F /* FeedKit */,
+			);
+			productName = "Pimpster (macOS)";
+			productReference = 1394C66525D5A80A0042B7B8 /* Pimpster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1394C65125D5A8080042B7B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					1394C65C25D5A80A0042B7B8 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					1394C66425D5A80A0042B7B8 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 1394C65425D5A8080042B7B8 /* Build configuration list for PBXProject "Pimpster" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1394C65025D5A8080042B7B8;
+			packageReferences = (
+				1394C69125D5ADE80042B7B8 /* XCRemoteSwiftPackageReference "FeedKit" */,
+			);
+			productRefGroup = 1394C65E25D5A80A0042B7B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1394C65C25D5A80A0042B7B8 /* Pimpster (iOS) */,
+				1394C66425D5A80A0042B7B8 /* Pimpster (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1394C65B25D5A80A0042B7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1394C66D25D5A80A0042B7B8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394C66325D5A80A0042B7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1394C66E25D5A80A0042B7B8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1394C65925D5A80A0042B7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13E2E34925D82FE90072F54F /* FeedItemDetailsView.swift in Sources */,
+				1394C68625D5A9940042B7B8 /* FeedView.swift in Sources */,
+				13E2E34425D82FA50072F54F /* FeedItemCellView.swift in Sources */,
+				1394C68425D5A9940042B7B8 /* RootView.swift in Sources */,
+				13E2E35525D83D060072F54F /* StickyPlayerView.swift in Sources */,
+				13E2E35025D837F00072F54F /* PlayerBrain.swift in Sources */,
+				13E2E33A25D7CFCC0072F54F /* ImageFromURLView.swift in Sources */,
+				13E2E33525D5D8EF0072F54F /* ImageLoader.swift in Sources */,
+				1394C68D25D5ACF70042B7B8 /* FeedBrain.swift in Sources */,
+				1394C66925D5A80A0042B7B8 /* PimpsterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394C66125D5A80A0042B7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13E2E34A25D82FE90072F54F /* FeedItemDetailsView.swift in Sources */,
+				1394C68725D5A9940042B7B8 /* FeedView.swift in Sources */,
+				13E2E34525D82FA50072F54F /* FeedItemCellView.swift in Sources */,
+				1394C68525D5A9940042B7B8 /* RootView.swift in Sources */,
+				13E2E35625D83D060072F54F /* StickyPlayerView.swift in Sources */,
+				13E2E35125D837F00072F54F /* PlayerBrain.swift in Sources */,
+				13E2E33B25D7CFCC0072F54F /* ImageFromURLView.swift in Sources */,
+				13E2E33625D5D8EF0072F54F /* ImageLoader.swift in Sources */,
+				1394C68E25D5ACF70042B7B8 /* FeedBrain.swift in Sources */,
+				1394C66A25D5A80A0042B7B8 /* PimpsterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1394C66F25D5A80A0042B7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1394C67025D5A80A0042B7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		1394C67225D5A80A0042B7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.as.Pimpster;
+				PRODUCT_NAME = Pimpster;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1394C67325D5A80A0042B7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.as.Pimpster;
+				PRODUCT_NAME = Pimpster;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1394C67525D5A80A0042B7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.as.Pimpster;
+				PRODUCT_NAME = Pimpster;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1394C67625D5A80A0042B7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.as.Pimpster;
+				PRODUCT_NAME = Pimpster;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1394C65425D5A8080042B7B8 /* Build configuration list for PBXProject "Pimpster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1394C66F25D5A80A0042B7B8 /* Debug */,
+				1394C67025D5A80A0042B7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1394C67125D5A80A0042B7B8 /* Build configuration list for PBXNativeTarget "Pimpster (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1394C67225D5A80A0042B7B8 /* Debug */,
+				1394C67325D5A80A0042B7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1394C67425D5A80A0042B7B8 /* Build configuration list for PBXNativeTarget "Pimpster (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1394C67525D5A80A0042B7B8 /* Debug */,
+				1394C67625D5A80A0042B7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1394C69125D5ADE80042B7B8 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1394C69225D5ADE80042B7B8 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1394C69125D5ADE80042B7B8 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+		13E2E33F25D7EF320072F54F /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1394C69125D5ADE80042B7B8 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1394C65125D5A8080042B7B8 /* Project object */;
+}
