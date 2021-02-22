@@ -32,7 +32,7 @@ struct FeedView: View {
             }
             .navigationTitle(Text(feedBrain.feed.title ?? ""))
             // add view to show in split view of iPad
-            Text("Select something in feed view")
+            Text("Select something in Feed view")
         }
         .onAppear(perform: feedBrain.resetStateToIdleIfNeeded)
     }

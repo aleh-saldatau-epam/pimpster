@@ -15,10 +15,10 @@ struct RootView: View {
                     Image(systemName: "music.note.list")
                     Text("Feed")
                 }
-            Text("Another Tab")
+            DownloadsView()
                 .tabItem {
-                    Image(systemName: "2.square.fill")
-                    Text("Second")
+                    Image(systemName: "icloud.and.arrow.down")
+                    Text("Downloads")
                 }
             Text("The Last Tab")
                 .tabItem {

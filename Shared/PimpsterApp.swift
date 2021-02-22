@@ -11,7 +11,9 @@ import SwiftUI
 struct PimpsterApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView().environmentObject(PlayerBrain())
+            RootView()
+                .environmentObject(PlayerBrain())
+                .environmentObject(DownloadsBrain())
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct FeedItemDetailsView: View {
     @EnvironmentObject var playerBrain: PlayerBrain
+    @EnvironmentObject var itemDownloadingBrain: DownloadsBrain
     @Environment(\.presentationMode) var presentationMode
     let item: RSSFeedItem
     var body: some View {
@@ -36,6 +37,9 @@ struct FeedItemDetailsView: View {
             }
             Button("Play") {
                 playerBrain.item = item
+            }
+            Button("Download") {
+                itemDownloadingBrain.download(item: item)
             }
         }
     }
