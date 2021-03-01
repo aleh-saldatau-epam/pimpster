@@ -36,7 +36,7 @@ struct FeedItemDetailsView: View {
                 Text(item.media?.mediaContents?.first?.attributes?.url ?? "")
             }
             Button("Play") {
-                playerBrain.item = item
+                playerBrain.playableItem = item
             }
             Button("Download") {
                 itemDownloadingBrain.download(item: item)

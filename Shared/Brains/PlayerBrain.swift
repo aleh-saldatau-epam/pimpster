@@ -24,20 +24,20 @@ class PlayerBrain: ObservableObject {
     private (set) var player: AVPlayer?
     private var observationItems = [AnyCancellable?]()
 
-    var item: RSSFeedItem? {
+    var playableItem: PlayableItem? {
         didSet {
             observationItems.removeAll()
-            let url = item?.media?.mediaContents?.first?.attributes?.url
-            print( url ?? "No url")
-            guard let urlString = url,
-                  let actualURL = URL(string: urlString) else {
+
+            guard let url = playableItem?.urlToPlayFrom else {
+                print("No url")
                 player = nil
                 visibility = .hidden
                 return
             }
+            print( url)
             visibility = .visible
 
-            let item = AVPlayerItem(url: actualURL)
+            let item = AVPlayerItem(url: url)
             player = AVPlayer(playerItem: item)
             player?.volume = 1.0
             player?.play()

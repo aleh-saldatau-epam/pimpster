@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130D1E7D25EBA10D007B189E /* DownloadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D1E7C25EBA10D007B189E /* DownloadItem.swift */; };
+		130D1E7E25EBA10D007B189E /* DownloadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D1E7C25EBA10D007B189E /* DownloadItem.swift */; };
 		1394C66925D5A80A0042B7B8 /* PimpsterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C65625D5A8090042B7B8 /* PimpsterApp.swift */; };
 		1394C66A25D5A80A0042B7B8 /* PimpsterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C65625D5A8090042B7B8 /* PimpsterApp.swift */; };
 		1394C66D25D5A80A0042B7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1394C65825D5A80A0042B7B8 /* Assets.xcassets */; };
@@ -16,6 +18,10 @@
 		1394C68D25D5ACF70042B7B8 /* FeedBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */; };
 		1394C68E25D5ACF70042B7B8 /* FeedBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */; };
 		1394C69325D5ADE80042B7B8 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1394C69225D5ADE80042B7B8 /* FeedKit */; };
+		13B1698825ED6DCC0079EA04 /* PlayableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1698725ED6DCC0079EA04 /* PlayableItem.swift */; };
+		13B1698925ED6DCC0079EA04 /* PlayableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1698725ED6DCC0079EA04 /* PlayableItem.swift */; };
+		13B1698F25ED76DF0079EA04 /* StickyPlayerViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1698E25ED76DF0079EA04 /* StickyPlayerViewModifier.swift */; };
+		13B1699025ED76DF0079EA04 /* StickyPlayerViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1698E25ED76DF0079EA04 /* StickyPlayerViewModifier.swift */; };
 		13E2E33525D5D8EF0072F54F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E33425D5D8EF0072F54F /* ImageLoader.swift */; };
 		13E2E33625D5D8EF0072F54F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E2E33425D5D8EF0072F54F /* ImageLoader.swift */; };
 		13E2E34025D7EF320072F54F /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13E2E33F25D7EF320072F54F /* FeedKit */; };
@@ -35,9 +41,12 @@
 		13FAD27925E42D3900449834 /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAD27725E42D3900449834 /* DownloadsView.swift */; };
 		13FAD27D25E42EFE00449834 /* DownloadsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAD27C25E42EFE00449834 /* DownloadsBrain.swift */; };
 		13FAD27E25E42EFE00449834 /* DownloadsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAD27C25E42EFE00449834 /* DownloadsBrain.swift */; };
+		13FAD28225E446D000449834 /* DownloadsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAD28125E446D000449834 /* DownloadsCellView.swift */; };
+		13FAD28325E446D000449834 /* DownloadsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAD28125E446D000449834 /* DownloadsCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		130D1E7C25EBA10D007B189E /* DownloadItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadItem.swift; sourceTree = "<group>"; };
 		1394C65625D5A8090042B7B8 /* PimpsterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PimpsterApp.swift; sourceTree = "<group>"; };
 		1394C65825D5A80A0042B7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1394C65D25D5A80A0042B7B8 /* Pimpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pimpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +56,8 @@
 		1394C66825D5A80A0042B7B8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		1394C68225D5A9940042B7B8 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBrain.swift; sourceTree = "<group>"; };
+		13B1698725ED6DCC0079EA04 /* PlayableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableItem.swift; sourceTree = "<group>"; };
+		13B1698E25ED76DF0079EA04 /* StickyPlayerViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyPlayerViewModifier.swift; sourceTree = "<group>"; };
 		13E2E33425D5D8EF0072F54F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		13E2E34F25D837F00072F54F /* PlayerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBrain.swift; sourceTree = "<group>"; };
 		13FAD26325E42CE100449834 /* FeedItemDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemDetailsView.swift; sourceTree = "<group>"; };
@@ -56,6 +67,7 @@
 		13FAD26925E42CE100449834 /* StickyPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyPlayerView.swift; sourceTree = "<group>"; };
 		13FAD27725E42D3900449834 /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
 		13FAD27C25E42EFE00449834 /* DownloadsBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsBrain.swift; sourceTree = "<group>"; };
+		13FAD28125E446D000449834 /* DownloadsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +141,12 @@
 		1394C68025D5A9940042B7B8 /* Brains */ = {
 			isa = PBXGroup;
 			children = (
+				130D1E7C25EBA10D007B189E /* DownloadItem.swift */,
+				13FAD27C25E42EFE00449834 /* DownloadsBrain.swift */,
 				1394C68C25D5ACF70042B7B8 /* FeedBrain.swift */,
 				13E2E33425D5D8EF0072F54F /* ImageLoader.swift */,
 				13E2E34F25D837F00072F54F /* PlayerBrain.swift */,
-				13FAD27C25E42EFE00449834 /* DownloadsBrain.swift */,
+				13B1698725ED6DCC0079EA04 /* PlayableItem.swift */,
 			);
 			path = Brains;
 			sourceTree = "<group>";
@@ -178,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				13FAD26925E42CE100449834 /* StickyPlayerView.swift */,
+				13B1698E25ED76DF0079EA04 /* StickyPlayerViewModifier.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -186,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				13FAD27725E42D3900449834 /* DownloadsView.swift */,
+				13FAD28125E446D000449834 /* DownloadsCellView.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -298,9 +314,13 @@
 			files = (
 				13FAD26E25E42CE100449834 /* FeedView.swift in Sources */,
 				13FAD26A25E42CE100449834 /* FeedItemDetailsView.swift in Sources */,
+				13B1698825ED6DCC0079EA04 /* PlayableItem.swift in Sources */,
 				13FAD27825E42D3900449834 /* DownloadsView.swift in Sources */,
 				13FAD26C25E42CE100449834 /* FeedItemCellView.swift in Sources */,
 				1394C68425D5A9940042B7B8 /* RootView.swift in Sources */,
+				13FAD28225E446D000449834 /* DownloadsCellView.swift in Sources */,
+				13B1698F25ED76DF0079EA04 /* StickyPlayerViewModifier.swift in Sources */,
+				130D1E7D25EBA10D007B189E /* DownloadItem.swift in Sources */,
 				13FAD27225E42CE100449834 /* StickyPlayerView.swift in Sources */,
 				13FAD27D25E42EFE00449834 /* DownloadsBrain.swift in Sources */,
 				13E2E35025D837F00072F54F /* PlayerBrain.swift in Sources */,
@@ -317,9 +337,13 @@
 			files = (
 				13FAD26F25E42CE100449834 /* FeedView.swift in Sources */,
 				13FAD26B25E42CE100449834 /* FeedItemDetailsView.swift in Sources */,
+				13B1698925ED6DCC0079EA04 /* PlayableItem.swift in Sources */,
 				13FAD27925E42D3900449834 /* DownloadsView.swift in Sources */,
 				13FAD26D25E42CE100449834 /* FeedItemCellView.swift in Sources */,
 				1394C68525D5A9940042B7B8 /* RootView.swift in Sources */,
+				13FAD28325E446D000449834 /* DownloadsCellView.swift in Sources */,
+				13B1699025ED76DF0079EA04 /* StickyPlayerViewModifier.swift in Sources */,
+				130D1E7E25EBA10D007B189E /* DownloadItem.swift in Sources */,
 				13FAD27325E42CE100449834 /* StickyPlayerView.swift in Sources */,
 				13FAD27E25E42EFE00449834 /* DownloadsBrain.swift in Sources */,
 				13E2E35125D837F00072F54F /* PlayerBrain.swift in Sources */,

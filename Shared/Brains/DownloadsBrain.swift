@@ -9,34 +9,6 @@ import Combine
 import FeedKit
 import Foundation
 
-/*
- Folder:
- Metadata folder - *.??? files to keep info about mp3
- Downloads folder - *.mp3 actual mp3 files
- */
-
-
-class DownloadItem: ObservableObject {
-    // UUID?????
-    var iTunesTitle: String?
-    var iTunesSubtitle: String?
-    var iTunesDuration: TimeInterval?
-    var iTunesSeason: Int?
-    var remoteURL: String?
-    var localURL: String?
-    @Published var downloadProgress: Progress?
-}
-
-extension DownloadItem: Hashable {
-    static func == (lhs: DownloadItem, rhs: DownloadItem) -> Bool {
-        return lhs.iTunesTitle == rhs.iTunesTitle
-    }
-
-    public var hashValue: Int {
-        return ObjectIdentifier(self).hashValue
-    }
-}
-
 class DownloadsBrain: ObservableObject {
 
     enum State {
@@ -50,6 +22,7 @@ class DownloadsBrain: ObservableObject {
     @Published private(set) var downloadItems: [DownloadItem] = [DownloadItem]()
 
     private var observationItems = [AnyCancellable?]()
+    private var urlSession = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
 
     func download(item: RSSFeedItem) {
         let di = DownloadItem()
@@ -63,23 +36,62 @@ class DownloadsBrain: ObservableObject {
 
         // TODO: Check number of downloads!!!
         // TODO: Resume logic!!
+
+        try? FileManager.default.createDirectory(at: DownloadItem.localAudioDirURL!, withIntermediateDirectories: true, attributes: nil)
+        try? FileManager.default.createDirectory(at: DownloadItem.localMetadataDirURL!, withIntermediateDirectories: true, attributes: nil)
+
         guard let urlStr = item.media?.mediaContents?.first?.attributes?.url,
               let url = URL(string: urlStr) else { return }
-        let task = URLSession.shared
-            .downloadTask(with: url, completionHandler: { (path, response, error) in
-                print(path)
+        di.state = .downloading
+        let task = urlSession
+            .downloadTask(with: url, completionHandler: { [weak self] (path, response, error) in
+                DispatchQueue.main.async { [weak self] in
+                    if let downloadPath = path,
+                       let localURL = di.localAudioURL {
+                        print("Downloaded at: " + downloadPath.absoluteString)
+                        print("Will move to: " + localURL.absoluteString)
+                        do {
+                            try FileManager.default.moveItem(at: downloadPath, to: localURL)
+                            try di.save()
+                            di.downloadProgress = nil
+                            if let index = self?.downloadItems.firstIndex(of: di) {
+                                self?.downloadItems.remove(at: index)
+                            }
+                            self?.scanDownloads()
+                        }
+                        catch {
+                            print("Error during moving file \(error)")
+                        }
+                    }
+                }
             })
-        let progressObserver = task.progress
-            .publisher(for: \.fractionCompleted)
-            .sink { (progress) in
-                print(progress)
-            }
-        observationItems.append(progressObserver)
+//        let progressObserver = task.progress
+//            .publisher(for: \.fractionCompleted)
+//            .receive(on: RunLoop.main)
+//            .sink { (downloadFraction) in
+//                print(downloadFraction)
+//                di.downloadFraction = downloadFraction
+//            }
+//        observationItems.append(progressObserver)
         di.downloadProgress = task.progress
         task.resume()
     }
 
     func scanDownloads() {
+        state = .scanningDownloads
+
+        downloadItems = downloadItems.filter { (di) -> Bool in
+            di.state != .downloaded
+        }
+
+        if let localMetadataURL = DownloadItem.localMetadataDirURL,
+           let fileNames = try? FileManager.default.contentsOfDirectory(atPath: localMetadataURL.path) {
+            for fileName in fileNames {
+                if let di = DownloadItem.decode(fileName: fileName) {
+                    downloadItems.append(di);
+                }
+            }
+        }
         state = .showDownloads
     }
 

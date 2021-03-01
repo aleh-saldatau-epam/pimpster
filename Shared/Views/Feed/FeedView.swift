@@ -30,6 +30,7 @@ struct FeedView: View {
                 }
 //                StickyPlayerView()
             }
+//            .modifier(StickyPlayerViewModifier())
             .navigationTitle(Text(feedBrain.feed.title ?? ""))
             // add view to show in split view of iPad
             Text("Select something in Feed view")

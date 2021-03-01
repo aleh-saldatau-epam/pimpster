@@ -22,13 +22,7 @@ struct DownloadsView: View {
                 case .showDownloads:
                     List {
                         ForEach(downloadsBrain.downloadItems, id: \.self) { item in
-                            VStack {
-                                Text(item.iTunesTitle ?? "No Title")
-                                Text(item.iTunesSubtitle ?? "No SubTitle")
-                                if let downloadProgress = item.downloadProgress {
-                                    ProgressView(downloadProgress)
-                                }
-                            }
+                            DownloadsCellView(dItem: item)
 //                            NavigationLink(destination: DownloadDetailsView(item: item),
 //                                           label: { FeedItemCellView(item: item) } )
                         }
