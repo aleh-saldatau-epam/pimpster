@@ -40,8 +40,12 @@ class FeedBrain: ObservableObject {
     }
 
     func resetStateToIdleIfNeeded() {
-        if case LoadingState.loaded = state {
+        switch state {
+        case .loaded,
+             .failed:
             state = .idle
+        default:
+            break
         }
     }
 

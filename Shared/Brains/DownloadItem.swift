@@ -5,6 +5,7 @@
 //  Created by Oleg Soldatoff on 28.02.21.
 //
 
+import Combine
 import Foundation
 
 /*
@@ -33,8 +34,9 @@ class DownloadItem: ObservableObject, Codable {
     var iTunesSeason: Int?
     var remoteURL: String?
 
+    var observationItems = [AnyCancellable?]()
+
     @Published var downloadProgress: Progress?
-    @Published var downloadFraction: Double = 0.0
     @Published var state: State = .initial
 
     enum CodingKeys: String, CodingKey {
