@@ -16,32 +16,109 @@ struct StickyPlayerView: View {
             case .hidden:
                 Color.clear.frame(width: 0, height: 0)
             case .visible:
-                VStack {
-                    Text("Player")
-                    PlayPauseButton()
-                    HStack {
-                        CurrentProgressView()
-                        SliderView()
-                        DurationView()
-                    }
-                }
+                PlayerInternalView(state: .compact)
             }
         }
     }
 }
 
-struct SliderView: View {
+struct PlayerInternalView: View {
+    enum PlayerState {
+        case compact
+        case expanded
+    }
+    @State var state: PlayerState = .compact
+    @EnvironmentObject var playerBrain: PlayerBrain
+    var body: some View {
+        VStack {
+            TopPlayerSubview(state: $state)
+            TitlePlayerSubview()
+            MoreInfoPlayerSubview(state: $state)
+            ControlsPlayerSubview()
+            ProgressInfoPlayerSubview()
+        }
+    }
+}
+
+struct TitlePlayerSubview: View {
+    @EnvironmentObject var playerBrain: PlayerBrain
+    var body: some View {
+        if let title = playerBrain.playableItem?.title {
+            Text(title)
+        }
+    }
+}
+
+struct MoreInfoPlayerSubview: View {
+    @Binding var state: PlayerInternalView.PlayerState
+    @EnvironmentObject var playerBrain: PlayerBrain
+    var body: some View {
+        switch state {
+        case .compact:
+            EmptyView()
+        case .expanded:
+            VStack {
+                if let description = playerBrain.playableItem?.description {
+                    Text(description)
+                }
+                ImageFromURLView(imageLoader: ImageLoader(urlString: playerBrain.playableItem?.imageUrlString))
+            }
+        }
+    }
+}
+
+struct ControlsPlayerSubview: View {
+    @EnvironmentObject var playerBrain: PlayerBrain
+    var body: some View {
+        HStack {
+            Spacer()
+            Button("-15 secs", action: { self.playerBrain.updateProgress(by: -15) })
+            Spacer()
+            PlayPauseButton()
+            Spacer()
+            Button("+15 secs", action: { self.playerBrain.updateProgress(by: 15) })
+            Spacer()
+        }
+    }
+}
+
+struct TopPlayerSubview: View {
+    @Binding var state: PlayerInternalView.PlayerState
+    @EnvironmentObject var playerBrain: PlayerBrain
+    var body: some View {
+        HStack {
+            Spacer()
+            switch state {
+            case .compact:
+                Button(action: { self.state = .expanded }, label: { Image(systemName: "chevron.compact.up") })
+            case .expanded:
+                Button(action: { self.state = .compact }, label: { Image(systemName: "chevron.compact.down") })
+            }
+            Spacer()
+            Button(action: { playerBrain.playableItem = nil }, label: { Image(systemName: "xmark.circle.fill") })
+        }
+    }
+}
+
+struct ProgressInfoPlayerSubview: View {
+    var body: some View {
+        HStack {
+            CurrentProgressPlayerSubview()
+            SliderPlayerSubview()
+            DurationPlayerSubview()
+        }
+    }
+}
+
+struct SliderPlayerSubview: View {
     @EnvironmentObject var playerBrain: PlayerBrain
     var body: some View {
         switch playerBrain.currentTime {
         case .some:
             // https://medium.com/flawless-app-stories/avplayer-swiftui-part-2-player-controls-c28b721e7e27
             Slider(value: $playerBrain.progress, in: 0...1) { (changed) in
-                guard let item = self.playerBrain.player?.currentItem else {
-                    return
-                }
-                let targetTime = self.playerBrain.progress * item.duration.seconds
-                self.playerBrain.player?.seek(to: CMTime(seconds: targetTime, preferredTimescale: 600))
+                // Slider updates progress and method below considers this
+                self.playerBrain.updateProgress(by: nil)
             }
         case .none:
             Color.clear
@@ -49,7 +126,7 @@ struct SliderView: View {
     }
 }
 
-struct CurrentProgressView: View {
+struct CurrentProgressPlayerSubview: View {
     @EnvironmentObject var playerBrain: PlayerBrain
     var body: some View {
         switch playerBrain.currentTime {
@@ -61,7 +138,7 @@ struct CurrentProgressView: View {
     }
 }
 
-struct DurationView: View {
+struct DurationPlayerSubview: View {
     @EnvironmentObject var playerBrain: PlayerBrain
     var body: some View {
         switch playerBrain.itemDuration {
@@ -79,13 +156,13 @@ struct PlayPauseButton: View {
         HStack {
             switch playerBrain.currentStatus {
             case .playing:
-//                Text("playing")
+                //                Text("playing")
                 Button("Pause", action: playerBrain.togglePlayPause)
             case .paused:
-//                Text("paused")
+                //                Text("paused")
                 Button("Play", action: playerBrain.togglePlayPause)
             case .waitingToPlayAtSpecifiedRate:
-                Text("waitingToPlayAtSpecifiedRate")
+                Text("Loading...")
             case .none:
                 Text("none")
             @unknown default:
@@ -100,3 +177,4 @@ struct StickyPlayerView_Previews: PreviewProvider {
         StickyPlayerView()
     }
 }
+

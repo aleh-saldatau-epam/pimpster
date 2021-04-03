@@ -27,6 +27,7 @@ class DownloadsBrain: ObservableObject {
         di.iTunesSubtitle = item.iTunes?.iTunesSubtitle
         di.iTunesDuration = item.iTunes?.iTunesDuration
         di.iTunesSeason = item.iTunes?.iTunesSeason
+        di.iTunesImageUrl = item.iTunes?.iTunesImage?.attributes?.href
         di.remoteURL = item.media?.mediaContents?.first?.attributes?.url
 
         downloadItems.append(di)

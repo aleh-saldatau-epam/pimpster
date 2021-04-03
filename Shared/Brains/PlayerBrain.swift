@@ -80,4 +80,13 @@ class PlayerBrain: ObservableObject {
             player?.play()
         }
     }
+
+    func updateProgress(by secs: Int?) {
+        guard let item = player?.currentItem else {
+            return
+        }
+        let targetTime = progress * item.duration.seconds + Double(secs ?? 0)
+        player?.seek(to: CMTime(seconds: targetTime, preferredTimescale: 600))
+
+    }
 }

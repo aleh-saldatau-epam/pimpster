@@ -32,6 +32,7 @@ class DownloadItem: ObservableObject, Codable {
     var iTunesSubtitle: String?
     var iTunesDuration: TimeInterval?
     var iTunesSeason: Int?
+    var iTunesImageUrl: String?
     var remoteURL: String?
 
     var observationItems = [AnyCancellable?]()
@@ -44,6 +45,7 @@ class DownloadItem: ObservableObject, Codable {
         case iTunesSubtitle
         case iTunesDuration
         case iTunesSeason
+        case iTunesImageUrl
         case remoteURL
     }
 
@@ -55,6 +57,7 @@ class DownloadItem: ObservableObject, Codable {
         iTunesSubtitle = try values.decodeIfPresent(String.self, forKey: .iTunesSubtitle)
         iTunesDuration = try values.decodeIfPresent(TimeInterval.self, forKey: .iTunesDuration)
         iTunesSeason = try values.decodeIfPresent(Int.self, forKey: .iTunesSeason)
+        iTunesImageUrl = try values.decodeIfPresent(String.self, forKey: .iTunesImageUrl)
         remoteURL = try values.decodeIfPresent(String.self, forKey: .remoteURL)
     }
 
@@ -64,6 +67,7 @@ class DownloadItem: ObservableObject, Codable {
         try container.encodeIfPresent(iTunesSubtitle, forKey: .iTunesSubtitle)
         try container.encodeIfPresent(iTunesDuration, forKey: .iTunesDuration)
         try container.encodeIfPresent(iTunesSeason, forKey: .iTunesSeason)
+        try container.encodeIfPresent(iTunesImageUrl, forKey: .iTunesImageUrl)
         try container.encodeIfPresent(remoteURL, forKey: .remoteURL)
     }
 }

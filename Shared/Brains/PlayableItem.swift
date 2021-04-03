@@ -10,6 +10,9 @@ import Foundation
 
 protocol PlayableItem {
     var urlToPlayFrom: URL? { get }
+    var title: String? { get }
+    var description: String? { get }
+    var imageUrlString: String? { get }
 }
 
 extension RSSFeedItem: PlayableItem {
@@ -22,11 +25,12 @@ extension RSSFeedItem: PlayableItem {
         }
         return actualURL
     }
+    var imageUrlString: String? { iTunes?.iTunesImage?.attributes?.href }
 }
 
 extension DownloadItem: PlayableItem {
-    var urlToPlayFrom: URL? {
-        return localAudioURL
-    }
-
+    var urlToPlayFrom: URL? { localAudioURL }
+    var title: String? { iTunesTitle }
+    var description: String? { iTunesSubtitle }
+    var imageUrlString: String? { iTunesImageUrl }
 }
